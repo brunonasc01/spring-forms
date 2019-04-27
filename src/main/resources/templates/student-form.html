@@ -20,6 +20,29 @@
 					
 					<br><br>
 					
+					Country:
+					
+					<select th:field="*{country}">
+					    <option th:each="entry : ${student.countryOptions}" th:value="${entry.key}" th:text="${entry.value}"></option>
+					</select>
+					
+					<br><br>
+					
+					Favorite Language:
+					Java <input type="radio" name="favoriteLanguage" value="Java"/>
+					C# <input type="radio" name="favoriteLanguage" value="C#"/>
+					Kotlin <input type="radio" name="favoriteLanguage" value="Kotlin"/>
+					Typescript <input type="radio" name="favoriteLanguage" value="Typescript"/>
+					
+					<br><br>
+					
+					Operating Systems:
+					Linux <input type="checkbox" name="operatingSystems" value="linux"/>
+					MS Windows <input type="checkbox" name="operatingSystems" value="windows"/>
+					Mac OS <input type="checkbox" name="operatingSystems" value="macos"/>
+					
+					<br><br>
+					
 					<input type="submit"/>
 				</form>
 			</div>
