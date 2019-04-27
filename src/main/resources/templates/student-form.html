@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Spring Forms - Using Model Class	</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<form action="processForm" method="post" th:object="${student}">
+				
+					First Name:
+					<input type="text" name="firstName"/>
+					
+					<br><br>
+					
+					First Name:
+					<input type="text" name="lastName"/>
+					
+					<br><br>
+					
+					<input type="submit"/>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
