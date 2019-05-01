@@ -3,6 +3,10 @@
 <head>
 	<title>Spring Forms - Using Model Class	</title>
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	<style>
+		.error {color: red}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -15,8 +19,21 @@
 					
 					<br><br>
 					
-					First Name:
-					<input type="text" name="lastName"/>
+					Last Name (*):
+					<input type="text" th:field="*{lastName}"/>
+					<span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+					
+					<br><br>
+					
+					Age (*):
+					<input type="text" th:field="*{age}"/>
+					<span class="error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+					
+					<br><br>
+					
+					PostalCode (*):
+					<input type="text" th:field="*{postalCode}"/>
+					<span class="error" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"></span>
 					
 					<br><br>
 					
